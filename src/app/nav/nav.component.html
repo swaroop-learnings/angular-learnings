@@ -1,0 +1,23 @@
+<nav class="container navbar navbar-expand-lg bg-body-tertiary">
+    <a class="navbar-brand" href="#">ng Material</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent"
+        aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNavContent" class="collapse navbar-collapse">
+        <button mat-button>Home</button>
+        <button mat-button [mat-menu-trigger-for]="services">Services</button>
+        <mat-menu #services="matMenu">
+            <button mat-menu-item>Service 1</button>
+            <button mat-menu-item [mat-menu-trigger-for]="service2">Service 2</button>
+            <button mat-menu-item>Service 3</button>
+        </mat-menu>
+        <mat-menu #service2="matMenu">
+            <button mat-menu-item>Option1</button>
+            <button mat-menu-item>Option2</button>
+            <button mat-menu-item>Option3</button>
+        </mat-menu>
+        <button mat-button>Registartion</button>
+        <button mat-button matTooltip="Contact-US">Contact US</button>
+    </div>
+</nav>

@@ -1,0 +1,65 @@
+
+<div class="row">
+  <div class="col">
+    <mat-toolbar color="primary">
+      <span style="font-family: 'Roboto', sans-serif;">My Angular Material App</span>
+     </mat-toolbar>
+  </div>
+  <div class="col">
+    <button mat-button>
+      <i class="fas fa-home"></i> Home
+     </button>
+  </div>
+</div>
+
+
+<div class="row">
+    <h5>CheckBox</h5>
+  <div class="col">
+    <mat-checkbox> Check Me!</mat-checkbox>
+  </div>
+</div>
+<div class="row">
+    <h5>Radio Button</h5>
+  <div class="col">
+    <mat-radio-group>
+      <mat-radio-button value="1"> Option1 </mat-radio-button>
+      <mat-radio-button value="2"> Option2 </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+<div class="row">
+    <h5>Button</h5>
+  <div class="col">
+    <button mat-button>Click Here!!</button>
+  </div>
+  <div class="col">
+    <section>
+      <div class="example-label">Flat</div>
+      <div class="example-button-row">
+        <button mat-flat-button>Basic</button>
+        <button mat-flat-button disabled>Disabled</button>
+        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+  </div>
+  <div class="row">
+    <div class="col">
+    <h5>Dropdown</h5>
+    <mat-form-field>
+        <mat-label>Select an Option</mat-label>
+        <mat-select [(value)] ="selected" formControl="states">
+            <mat-option>Select</mat-option>
+            <mat-option value="option1">Option1</mat-option>
+            <mat-option value="option2" disabled>Option2 (disabled)</mat-option>
+            <mat-option value="option3">Option3</mat-option>
+            @for (state of states; track state) {
+                <mat-option [value]="state">{{state}}</mat-option>
+              }
+        </mat-select>
+    </mat-form-field>
+    <p>You selected: {{selected}}</p>
+    
+</div>
+  </div>
+</div>
